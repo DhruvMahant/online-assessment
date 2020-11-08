@@ -1,0 +1,54 @@
+
+    
+   <div class="container w-25" *ngIf="startDiv" >
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class=" min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+               <input type="button" value="Start Quiz" class="btn btn-primary" (click)="startQuiz()" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5 " *ngIf="quizDiv">
+    <div class="d-flex justify-content-center row ">
+        <div class="col-md-10 col-lg-10">
+            <div class="border bg-dark">
+                <div class="question bg-dark p-3 ">
+                    <div class="d-flex flex-row justify-content-center align-items-center text-white ">
+                        <h4>ASP.Net Quiz</h4><span></span>
+                    </div>
+                </div>
+                <div>
+
+            
+                </div>
+                <div class="question bg-dark p-3 ">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.{{questionId}}</h3>
+                        <h5 class="mt-1 ml-2 text-white">{{questionStr}}</h5>
+                    </div>
+                    <div *ngFor="let op of option" class="container" > 
+                        <div class="ans ml-4">
+                            <label class="radio"> <input type="radio" name="anwers" [value]="op" [(ngModel)]= "selectedAnswer" [checked] = "op == selectedAnswer ? true : false" > <span>{{op}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-dark">
+                    <button class="btn btn-primary d-flex float-right btn-danger" type="button" (click)="previousQuestion()" [disabled]="index == 0"><i class="fa fa-angle-left mt-1 mr-1" ></i>&nbsp;Previous</button>
+                    
+                    <button class="btn btn-primary border-success float-center btn-info" type="button" (click)="submitQuiz()" [disabled]="index != 9">Submit Quiz<i class="fa fa-angle-right ml-2"></i></button>
+                    
+                    <button class="btn btn-primary border-success float-left btn-success" type="button" (click)="nextQuestion()" [disabled]="index == 9">Next<i class="fa fa-angle-right ml-2"></i></button>
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
