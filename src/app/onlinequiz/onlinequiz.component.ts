@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Question } from '../model.question';
 import { QuestionserviceService } from '../questionservice.service';
 
+
 @Component({
   selector: 'app-onlinequiz',
   templateUrl: './onlinequiz.component.html',
@@ -19,6 +20,7 @@ export class OnlinequizComponent implements OnInit {
   score:number = 0;
   quizDiv: boolean = false;
   startDiv:boolean = true;
+  scoreDiv:boolean = false;
  
 
 
@@ -40,9 +42,14 @@ export class OnlinequizComponent implements OnInit {
     this.questionStr = this.questions[this.index].question;
     this.option = this.questions[this.index].options;
   }
+  getAnswer (event: any) {
+   this.quizAnswers[this.index] = event.target.value;
+   this.selectedAnswer = event.target.value;
+  }
 
   nextQuestion(){
-    this.quizAnswers[this.index] = this.selectedAnswer;
+   // this.quizAnswers[this.index] = this.selectedAnswer;
+   this.selectedAnswer = this.quizAnswers[this.index];
     this.index++;
     if(this.index >= this.questions.length - 1)
     {
@@ -52,9 +59,6 @@ export class OnlinequizComponent implements OnInit {
     this.questionStr = this.questions[this.index].question;
     this.option = this.questions[this.index].options;
     
-    this.selectedAnswer = this.quizAnswers[this.index];
-
-    console.log(this.index);
    
     
   }
@@ -72,7 +76,7 @@ export class OnlinequizComponent implements OnInit {
     this.option = this.questions[this.index].options;
 
     this.selectedAnswer = this.quizAnswers[this.index];
-    console.log(this.quizAnswers);
+    
 
   }
 
@@ -93,7 +97,9 @@ export class OnlinequizComponent implements OnInit {
       }
     }
 
-    alert(this.score + "/10");
+    
+    this.scoreDiv = true;
+    this.quizDiv = false;
 
   }
 

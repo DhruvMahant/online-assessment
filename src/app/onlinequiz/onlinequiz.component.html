@@ -31,7 +31,8 @@
                     </div>
                     <div *ngFor="let op of option" class="container" > 
                         <div class="ans ml-4">
-                            <label class="radio"> <input type="radio" name="anwers" [value]="op" [(ngModel)]= "selectedAnswer" [checked] = "op == selectedAnswer ? true : false" > <span>{{op}}</span>
+                            <label class="radio"> <input type="radio" 
+                                (change)="getAnswer($event)" name="anwers" [value]="op"  [checked] = "op == selectedAnswer ? true : false" > <span>{{op}}</span>
                             </label>
                         </div>
                     </div>
@@ -52,3 +53,31 @@
         </div>
     </div>
 </div>
+
+
+<div class="container mt-5 " *ngIf="scoreDiv" >
+    <div class="d-flex justify-content-center row ">
+        <div class="col-md-10 col-lg-10">
+            <div class="border bg-dark">
+                <div class="question bg-dark p-3 ">
+                    <div class="d-flex flex-row justify-content-center align-items-center text-white ">
+                        <h4>ASP.Net Quiz</h4><span></span>
+                    </div>
+                </div>
+                <div>
+
+            
+                </div>
+                <div class="question bg-dark p-3 ">
+                    <div class="d-flex justify-content-center question-title">
+                        <h2 class="mt-1 ml-2 text-white">{{score}}/10</h2>
+                    </div>
+                   
+                    
+                   
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+

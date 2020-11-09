@@ -1,0 +1,134 @@
+{
+    "Questions": [
+       
+            {
+				"qid": 1,
+                "question": "ASP.NET was developed by",
+                "options": [
+                    "IBM",
+                    "Google",
+                    "Microsoft",
+                    "Apple"
+                ],
+                "answer": "Microsoft"
+            },
+            
+            {
+			  "qid" : 2,
+              "question": "The file extension an ASP.NET web form is -",
+              "options": [
+                    ".html",
+                    ".cs",
+                    ".aspx",
+                    ".js"
+                
+                ],
+                "answer": ".aspx"
+            },
+            
+            {
+			  "qid" : 3,
+              "question": "The term for the pages that depend upon a master page is called-",
+              "options": [
+                    "Master pages",
+                    "Content pages",
+                    "Web pages",
+                    "My pages"
+                
+                ],
+                "answer": "Content pages"
+            },
+            
+            {
+			  "qid" : 4,
+              "question": "Application_Start event is available in ________ .",
+              "options": [
+                    "Web.config",
+                    "Local.asax",
+                    "Global.asax",
+                    "Start.aspx"
+                
+                ],
+                "answer": "Global.asax"
+            },
+            
+            {
+              "qid" : 5,
+			  "question": "____________ is not an ASP.NET page event.",
+              "options": [
+                    "Init",
+                    "Load",
+                    "Import",
+                    "All of the above"
+                
+                ],
+                "answer": "Import"
+            },
+            
+            {
+			   "qid" : 6,
+              "question": "ASP.NET was first released in",
+              "options": [
+                    "Jan 2004",
+                    "Feb 2002",
+                    "Jan 2001",
+                    "Jan 2002"
+                
+                ],
+                "answer": "Jan 2002"
+            },
+            
+            
+            {
+              "qid" : 7,
+			  "question": "Which of the following is the first event of the ASP.NET page, when the user requests a web page?",
+              "options": [
+                    "Init",
+                    "Load",
+                    "PreInit",
+                    "PreLoad"
+                
+                ],
+                "answer": "PreInit"
+            },
+            
+           {
+              "qid" : 8,
+			  "question": "True or False, Boolean is the DataType return in IsPostback property.",
+              "options": [
+                    "True",
+                    "False"
+                
+                ],
+                "answer": "True"
+            },
+            
+           {
+              "qid" : 9,
+			  "question": " _________________ is the code mixed with the HTML and asp controls called?",
+              "options": [
+                    "Inline Code",
+                    "Bar Code",
+                    "Both a & b"
+                  
+                
+                ],
+                "answer": "Inline Code"
+            },
+            
+          {
+              "qid" : 10,
+			  "question": "True or False, We are not using a server when we run our .aspx projects",
+              "options": [
+                    "True",
+                    "False"
+                
+                ],
+                "answer": "False"
+            }
+            
+            
+        ]
+        
+    
+}
