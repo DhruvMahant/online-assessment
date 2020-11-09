@@ -70,7 +70,17 @@
                 </div>
                 <div class="question bg-dark p-3 ">
                     <div class="d-flex justify-content-center question-title">
-                        <h2 class="mt-1 ml-2 text-white">{{score}}/10</h2>
+                        <h2 class="mt-1 ml-2 text-white">{{score}}/10</h2> 
+                        <div *ngIf="score >= 7">
+                            <br>
+                            <h3 class="mt-1 ml-2 text-white" >Congratulation You Passed the Quiz</h3><p style="font-size:100px">🥳</p>
+                        </div>
+                        
+                        <div *ngIf="score < 7">
+                            <br>
+                            <h3 class="mt-1 ml-2 text-white" >Better Luck Next Time</h3><span style='font-size:100px;'>🙂</span>
+                        </div>
+                        
                     </div>
                    
                     
